@@ -1,0 +1,21 @@
+<resources>
+<string name="app_name">Crap Game</string>
+<string name="PlayTextView"> Game: </string>
+<string name="WinsTextView"> Wins: </string>
+<string name="LossTextView"> Losses: </string>
+<string name="RollTextView"> Rolls: </string>
+<string name="PointsTextView"> Points: </string>
+<string name="RollButton">Roll</string>
+<string name="WelcomeTextView">Welcome!</string>
+<string name="TextView2">How much do you want to bet?</string>
+<string-array name="numbers">
+    <item>5</item>
+    <item>10</item>
+    <item>25</item>
+    <item>50</item>
+    <item>75</item>
+    <item>100</item>
+</string-array>
+
+</resources>
+

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <ImageView
+        android:id="@+id/Dice_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:contentDescription="dice"
+        app:layout_constraintEnd_toStartOf="@+id/Dice_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/d1_foreground" />
+
+    <ImageView
+        android:id="@+id/Dice_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:contentDescription="dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/d1_foreground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/Dice_1"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/PlayTextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/PlayTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Craps_game"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/WinstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/WinsTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Wins"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/LosstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/LossTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Losses"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/RolltextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/RollTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Rolls"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/PointstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/PointsTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Points"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Rollbutton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:onClick="onClickBtn"
+            android:text="@string/RollButton"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
