@@ -4,10 +4,10 @@
     <string name="WinsTextView"> Wins: </string>
     <string name="LossTextView"> Losses: </string>
     <string name="RollTextView"> Rolls: </string>
-    <string name="PointsTextView"> Points: </string>
+    <string name="PointsTextView"> Point: </string>
     <string name="RollButton">Roll</string>
-    <string name="WelcomeTextView">Welcome!</string>
-    <string name="TextView2">How much do you want to bet?</string>
+    <string name="WelcomeTextView">Welcome to Crap!</string>
+    <string name="Howmuch">How much do you want to lose today?</string>
     <string name="TextView3">Whatever</string>
     <string-array name="numbers">
         <item>5</item>
@@ -25,5 +25,7 @@
     On the Come Out roll, if a 7 or 11 is rolled prior to establishing a Point, any Player who bet on the Pass Line wins.
         If, however, a 2, 3 or 12 is rolled, the Pass Line bet loses. The opposite is true with the Don&amp; Pass bet, in which case, the 7 and 11 loses, and the 2, 3 and 12 wins, if rolled prior to a Point being established.</string>
     <string name="news">News</string>
+    <string name="play_button">Lets Lose!</string>
+    <string name="enteramount">Enter Amount</string>
 </resources>
 
