@@ -36,9 +36,9 @@
             android:id="@+id/Enteramount"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:inputType="number"
             android:text="@string/enteramount"
-            android:inputType="text"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/btnStartGame"
