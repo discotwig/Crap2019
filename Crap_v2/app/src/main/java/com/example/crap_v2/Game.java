@@ -1,11 +1,16 @@
 package com.example.crap_v2;
 
         import androidx.appcompat.app.AppCompatActivity;
+
+        import android.content.Intent;
         import android.os.Bundle;
         import android.app.AlertDialog;
         import android.content.DialogInterface;
         import android.os.Bundle;
         import android.app.Activity;
+        import android.view.Menu;
+        import android.view.MenuInflater;
+        import android.view.MenuItem;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
@@ -17,7 +22,7 @@ public class Game extends AppCompatActivity {
 
     Boolean first_roll = true;
     ImageView die1_i, die2_i;
-    TextView wins_t, losses_t, games_t, roles_t, point_t;
+    TextView wins_t, losses_t, games_t, roles_t, point_t, news_t;
     Button roll_b;
 
     int sum; // sum in main
@@ -51,6 +56,8 @@ public class Game extends AppCompatActivity {
         roles_t = (TextView) findViewById(R.id.Rolls);
         point_t = (TextView) findViewById(R.id.Points);
 
+        news_t = (TextView) findViewById(R.id.News);
+
         roll_b = (Button) findViewById(R.id.Rollbutton);
 
         sum = 0;
@@ -68,6 +75,10 @@ public class Game extends AppCompatActivity {
 
     public void onClickBtn(View v)
     {
+        newGame();
+    }
+
+    public void newGame(){
         if (first_roll){
 
             roles = 1;
@@ -81,7 +92,8 @@ public class Game extends AppCompatActivity {
                 // WIN
                 case 7:
                 case 11:
-                    Toast.makeText(getApplicationContext(), s_won ,Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), s_won ,Toast.LENGTH_SHORT).show();
+                    news_t.setText(String.valueOf(s_won));
 
                     wins = wins + 1;
                     wins_t.setText(String.valueOf(wins));
@@ -96,7 +108,8 @@ public class Game extends AppCompatActivity {
                 case 2:
                 case 3:
                 case 12:
-                    Toast.makeText(getApplicationContext(), s_lost ,Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), s_lost ,Toast.LENGTH_SHORT).show();
+                    news_t.setText(String.valueOf(s_lost));
 
                     losses = losses + 1;
                     losses_t.setText(String.valueOf(losses));
@@ -109,7 +122,9 @@ public class Game extends AppCompatActivity {
 
                 // ROLL AGAIN
                 default:
-                    Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
+                    news_t.setText(String.valueOf(s_reroll));
+
                     point = sum;
                     point_t.setText(String.valueOf(point));
                     first_roll = false;
@@ -127,7 +142,8 @@ public class Game extends AppCompatActivity {
 
             // WIN
             if (sum == point) {
-                Toast.makeText(getApplicationContext(), s_point ,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), s_point ,Toast.LENGTH_SHORT).show();
+                news_t.setText(String.valueOf(s_point));
 
                 wins = wins + 1;
                 wins_t.setText(String.valueOf(wins));
@@ -139,7 +155,8 @@ public class Game extends AppCompatActivity {
 
             // LOSE
             if (sum == 7) {
-                Toast.makeText(getApplicationContext(), s_lost ,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), s_lost ,Toast.LENGTH_SHORT).show();
+                news_t.setText(String.valueOf(s_lost));
 
                 losses = losses + 1;
                 losses_t.setText(String.valueOf(losses));
@@ -150,17 +167,18 @@ public class Game extends AppCompatActivity {
             }
 
             if (roles == 5) {
-                Toast.makeText(getApplicationContext(), s_boring,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), s_boring,Toast.LENGTH_SHORT).show();
+                news_t.setText(String.valueOf(s_boring));
+
             }
             else {
-                Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
+                news_t.setText(String.valueOf(s_reroll));
             }
         }
-
     }
 
-    public int throwDice()
-    {
+    public int throwDice() {
         die1 = (int)(Math.random()*6 + 1);
         switch (die1) {
             case 1: die1_i.setImageResource(R.mipmap.d1_foreground);
@@ -196,6 +214,35 @@ public class Game extends AppCompatActivity {
         d_sum = die1 + die2;
         return d_sum;
     }
+
+    public void showHelp(){
+        Intent intent = new Intent(Game.this, Instruct.class);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.game_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.new_game:
+                newGame();
+                return true;
+            case R.id.help:
+                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 
 }
