@@ -6,6 +6,9 @@ package com.example.crap_v2;
         import android.content.DialogInterface;
         import android.os.Bundle;
         import android.app.Activity;
+        import android.view.Menu;
+        import android.view.MenuInflater;
+        import android.view.MenuItem;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
@@ -68,6 +71,10 @@ public class Game extends AppCompatActivity {
 
     public void onClickBtn(View v)
     {
+        newGame();
+    }
+
+    public void newGame(){
         if (first_roll){
 
             roles = 1;
@@ -156,11 +163,9 @@ public class Game extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
             }
         }
-
     }
 
-    public int throwDice()
-    {
+    public int throwDice() {
         die1 = (int)(Math.random()*6 + 1);
         switch (die1) {
             case 1: die1_i.setImageResource(R.mipmap.d1_foreground);
@@ -196,6 +201,29 @@ public class Game extends AppCompatActivity {
         d_sum = die1 + die2;
         return d_sum;
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.game_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.new_game:
+                newGame();
+                return true;
+            case R.id.help:
+                //showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 
 }
