@@ -17,8 +17,13 @@ public class Start extends AppCompatActivity {
     public void MainStartClick(View v) {
         switch (v.getId()) {
             case R.id.btnStartGame:
-                Intent intent = new Intent(Start.this, Game.class);
-                startActivity(intent);
+                Intent start = new Intent(Start.this, Game.class);
+                startActivity(start);
+                break;
+
+            case R.id.btnInstruct:
+                Intent instruct = new Intent(Start.this, Instruct.class);
+                startActivity(instruct);
                 break;
         }
     }

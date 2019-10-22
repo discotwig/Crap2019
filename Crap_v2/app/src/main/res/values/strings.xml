@@ -26,5 +26,6 @@
         If, however, a 2, 3 or 12 is rolled, the Pass Line bet loses. The opposite is true with the Don&amp; Pass bet, in which case, the 7 and 11 loses, and the 2, 3 and 12 wins, if rolled prior to a Point being established.</string>
     <string name="play_button">Lets Lose!</string>
     <string name="enteramount">Enter Amount</string>
+    <string name="instruct_button">Show me how to lose</string>
 </resources>
 

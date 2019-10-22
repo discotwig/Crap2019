@@ -84,6 +84,8 @@ public class Game extends AppCompatActivity {
             roles = 1;
             roles_t.setText(String.valueOf(roles));
 
+            games_t.setText(String.valueOf(game));
+
             sum = throwDice();
             Toast.makeText(getApplicationContext(), String.valueOf(sum) ,Toast.LENGTH_SHORT).show();
 
@@ -149,7 +151,7 @@ public class Game extends AppCompatActivity {
                 wins_t.setText(String.valueOf(wins));
 
                 game = game + 1;
-                games_t.setText(String.valueOf(game));
+                //games_t.setText(String.valueOf(game));
                 first_roll = true;
             }
 
@@ -162,7 +164,7 @@ public class Game extends AppCompatActivity {
                 losses_t.setText(String.valueOf(losses));
 
                 game = game + 1;
-                games_t.setText(String.valueOf(game));
+                //games_t.setText(String.valueOf(game));
                 first_roll = true;
             }
 
