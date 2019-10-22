@@ -24,8 +24,10 @@
       The object of this Come Out roll is to establish a Point, which needs to be something other than a 2, 3, 7, 11 or 12.
     On the Come Out roll, if a 7 or 11 is rolled prior to establishing a Point, any Player who bet on the Pass Line wins.
         If, however, a 2, 3 or 12 is rolled, the Pass Line bet loses. The opposite is true with the Don&amp; Pass bet, in which case, the 7 and 11 loses, and the 2, 3 and 12 wins, if rolled prior to a Point being established.</string>
-    <string name="news">News</string>
     <string name="play_button">Lets Lose!</string>
     <string name="enteramount">Enter Amount</string>
+    <string name="instruct_button">Show me how to lose</string>
+    <string name="warning">Please enter amount divisible by 5 :)</string>
+    <string name="balance">Balance:</string>
 </resources>
 

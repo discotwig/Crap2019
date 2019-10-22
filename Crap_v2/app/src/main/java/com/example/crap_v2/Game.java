@@ -22,8 +22,10 @@ public class Game extends AppCompatActivity {
 
     Boolean first_roll = true;
     ImageView die1_i, die2_i;
-    TextView wins_t, losses_t, games_t, roles_t, point_t, news_t;
+    TextView wins_t, losses_t, games_t, roles_t, point_t, news_t, balance;
     Button roll_b;
+
+
 
     int sum; // sum in main
     int point;
@@ -33,13 +35,13 @@ public class Game extends AppCompatActivity {
     int die1, die2;
     int d_sum; //sum in throwDice()
     int roles;
+    int bal;
 
     String s_won = "Winner Winner!";
     String s_lost = "You Lose! Play Again!";
     String s_point = "The Point has been Made! "
             + "Winner Winner!";
     String s_reroll = "Roll Again!";
-    String s_boring = "Wow this game is boring! ";
 
 
     @Override
@@ -47,9 +49,24 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
 
+        //
+        String newString;
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                bal= 0;
+            } else {
+                bal= extras.getInt("buyin");
+            }
+        } else {
+            bal= (int) savedInstanceState.getSerializable("buyin");
+        }
+//
+
         die1_i = (ImageView) findViewById(R.id.Dice_1);
         die2_i = (ImageView) findViewById(R.id.Dice_2);
 
+        balance = (TextView) findViewById(R.id.BuyIn_amount);
         wins_t = (TextView) findViewById(R.id.Wins);
         losses_t = (TextView) findViewById(R.id.Losses);
         games_t = (TextView) findViewById(R.id.Craps_game);
@@ -59,6 +76,8 @@ public class Game extends AppCompatActivity {
         news_t = (TextView) findViewById(R.id.News);
 
         roll_b = (Button) findViewById(R.id.Rollbutton);
+
+
 
         sum = 0;
         point = 0;
@@ -71,6 +90,7 @@ public class Game extends AppCompatActivity {
         losses_t.setText(String.valueOf(losses));
         roles = 0;
         roles_t.setText(String.valueOf(roles));
+        balance.setText(String.valueOf(bal));
     }
 
     public void onClickBtn(View v)
@@ -83,6 +103,8 @@ public class Game extends AppCompatActivity {
 
             roles = 1;
             roles_t.setText(String.valueOf(roles));
+
+            games_t.setText(String.valueOf(game));
 
             sum = throwDice();
             Toast.makeText(getApplicationContext(), String.valueOf(sum) ,Toast.LENGTH_SHORT).show();
@@ -149,7 +171,7 @@ public class Game extends AppCompatActivity {
                 wins_t.setText(String.valueOf(wins));
 
                 game = game + 1;
-                games_t.setText(String.valueOf(game));
+                //games_t.setText(String.valueOf(game));
                 first_roll = true;
             }
 
@@ -162,15 +184,10 @@ public class Game extends AppCompatActivity {
                 losses_t.setText(String.valueOf(losses));
 
                 game = game + 1;
-                games_t.setText(String.valueOf(game));
+                //games_t.setText(String.valueOf(game));
                 first_roll = true;
             }
 
-            if (roles == 5) {
-                //Toast.makeText(getApplicationContext(), s_boring,Toast.LENGTH_SHORT).show();
-                news_t.setText(String.valueOf(s_boring));
-
-            }
             else {
                 //Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
                 news_t.setText(String.valueOf(s_reroll));
@@ -238,6 +255,7 @@ public class Game extends AppCompatActivity {
             case R.id.help:
                 showHelp();
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
