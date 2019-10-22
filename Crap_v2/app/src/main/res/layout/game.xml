@@ -93,6 +93,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"/>
 
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/numbers"/>
+
         </LinearLayout>
 
         <LinearLayout
