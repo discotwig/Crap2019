@@ -59,7 +59,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="30dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,8 +105,8 @@
         </LinearLayout>
 
         <Space
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:layout_weight="1" />
 
         <LinearLayout
@@ -160,10 +160,23 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:onClick="onClickBtn"
             android:text="@string/RollButton"
             android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/News"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/news"
+            android:textSize="24sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"/>
 
     </LinearLayout>
 
