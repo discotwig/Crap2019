@@ -27,5 +27,7 @@
     <string name="play_button">Lets Lose!</string>
     <string name="enteramount">Enter Amount</string>
     <string name="instruct_button">Show me how to lose</string>
+    <string name="warning">Please enter amount divisible by 5 :)</string>
+    <string name="balance">Balance:</string>
 </resources>
 

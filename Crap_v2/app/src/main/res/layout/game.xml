@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp">
 
             <TextView
@@ -56,16 +57,27 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"/>
-        </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/BuyIn_textview"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/balance"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BuyIn_amount"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="15dp">
 
             <TextView
@@ -105,14 +117,10 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:layout_marginLeft="15dp"
             android:layout_marginStart="15dp">
