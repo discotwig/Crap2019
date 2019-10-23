@@ -93,10 +93,19 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"/>
 
-            <Spinner
+            <TextView
+                android:id="@+id/Betview"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/numbers"/>
+                android:text="@string/bet"
+                android:textSize="24sp"/>
+
+            <Spinner
+                android:id="@+id/bet_spin"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/numbers"
+                android:textSize="24sp"/>
 
         </LinearLayout>
 

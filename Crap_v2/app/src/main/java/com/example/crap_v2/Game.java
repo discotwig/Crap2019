@@ -15,6 +15,7 @@ package com.example.crap_v2;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.ImageView;
+        import android.widget.Spinner;
         import android.widget.TextView;
         import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class Game extends AppCompatActivity {
     ImageView die1_i, die2_i;
     TextView wins_t, losses_t, games_t, roles_t, point_t, news_t, balance;
     Button roll_b;
+    Spinner bet_spin;
 
 
 
@@ -36,12 +38,14 @@ public class Game extends AppCompatActivity {
     int d_sum; //sum in throwDice()
     int roles;
     int bal;
+    int bet;
 
     String s_won = "Winner Winner!";
     String s_lost = "You Lose! Play Again!";
     String s_point = "The Point has been Made! "
             + "Winner Winner!";
     String s_reroll = "Roll Again!";
+    String s_poor = "You Broke, Bet Less or Start New Game!";
 
 
     @Override
@@ -49,7 +53,6 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
 
-        //
         String newString;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -61,7 +64,8 @@ public class Game extends AppCompatActivity {
         } else {
             bal= (int) savedInstanceState.getSerializable("buyin");
         }
-//
+
+
 
         die1_i = (ImageView) findViewById(R.id.Dice_1);
         die2_i = (ImageView) findViewById(R.id.Dice_2);
@@ -76,6 +80,9 @@ public class Game extends AppCompatActivity {
         news_t = (TextView) findViewById(R.id.News);
 
         roll_b = (Button) findViewById(R.id.Rollbutton);
+
+        bet_spin = (Spinner) findViewById(R.id.bet_spin);
+
 
 
 
@@ -95,7 +102,15 @@ public class Game extends AppCompatActivity {
 
     public void onClickBtn(View v)
     {
-        newGame();
+        String selected = bet_spin.getSelectedItem().toString();
+        bet = Integer.parseInt(selected);
+
+        if (bal < bet || bal < 5) {
+            news_t.setText(String.valueOf(s_poor));
+        } else {
+            newGame();
+        }
+
     }
 
     public void newGame(){
@@ -124,6 +139,9 @@ public class Game extends AppCompatActivity {
                     games_t.setText(String.valueOf(game));
                     first_roll = true;
 
+                    bal = bal + bet;
+                    balance.setText(String.valueOf(bal));
+
                     break;
 
                 // LOSE
@@ -139,6 +157,9 @@ public class Game extends AppCompatActivity {
                     game = game + 1;
                     games_t.setText(String.valueOf(game));
                     first_roll = true;
+
+                    bal = bal - bet;
+                    balance.setText(String.valueOf(bal));
 
                     break;
 
@@ -173,6 +194,9 @@ public class Game extends AppCompatActivity {
                 game = game + 1;
                 //games_t.setText(String.valueOf(game));
                 first_roll = true;
+
+                bal = bal + bet;
+                balance.setText(String.valueOf(bal));
             }
 
             // LOSE
@@ -186,8 +210,10 @@ public class Game extends AppCompatActivity {
                 game = game + 1;
                 //games_t.setText(String.valueOf(game));
                 first_roll = true;
-            }
 
+                bal = bal - bet;
+                balance.setText(String.valueOf(bal));
+            }
             else {
                 //Toast.makeText(getApplicationContext(), s_reroll ,Toast.LENGTH_SHORT).show();
                 news_t.setText(String.valueOf(s_reroll));
@@ -238,6 +264,12 @@ public class Game extends AppCompatActivity {
 
     }
 
+    public void showMain(){
+        Intent intent = new Intent(Game.this, Start.class);
+        startActivity(intent);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -250,7 +282,7 @@ public class Game extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.new_game:
-                newGame();
+                showMain();
                 return true;
             case R.id.help:
                 showHelp();
