@@ -27,15 +27,20 @@ public class Game extends AppCompatActivity {
 
 
 
-    int sum; // sum in main
+    int sum; // dice sum in main
     int point;
     int game;
     int wins;
     int losses;
     int die1, die2;
-    int d_sum; //sum in throwDice()
+    int d_sum; // dice sum in throwDice()
     int roles;
+<<<<<<< Updated upstream
     int bal;
+=======
+    int bal; //balance from start game
+    int bet; //how much to bet per game
+>>>>>>> Stashed changes
 
     String s_won = "Winner Winner!";
     String s_lost = "You Lose! Play Again!";
