@@ -42,10 +42,11 @@ public class Game extends AppCompatActivity {
 
     String s_won = "Winner Winner!";
     String s_lost = "You Lose! Play Again!";
-    String s_point = "The Point has been Made! "
+    String s_point = "The Point has been Made! \n"
             + "Winner Winner!";
     String s_reroll = "Roll Again!";
-    String s_poor = "You Broke, Bet Less or Start New Game!";
+    String s_poor = "You Broke, Bet Less \n"
+            + "or Start New Game!";
 
 
     @Override
