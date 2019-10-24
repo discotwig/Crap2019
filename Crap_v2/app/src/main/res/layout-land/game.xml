@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myblue"
+    tools:context=".Game">
+
+    <ImageView
+        android:id="@+id/Dice_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:contentDescription="dice"
+        app:layout_constraintEnd_toStartOf="@+id/Dice_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/d1_foreground" />
+
+    <ImageView
+        android:id="@+id/Dice_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:contentDescription="dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/d1_foreground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/PlayTextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/PlayTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Craps_game"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/BuyIn_textview"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/balance"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/BuyIn_amount"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/WinstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/WinsTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Wins"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/Betview"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bet"
+                android:textSize="24sp"/>
+
+            <Spinner
+                android:id="@+id/bet_spin"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/numbers"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/LosstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/LossTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Losses"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/RolltextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/RollTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Rolls"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/PointstextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/PointsTextView"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Points"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/News"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <Button
+                android:id="@+id/Rollbutton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBtn"
+                android:text="@string/RollButton"
+                android:textSize="24sp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
