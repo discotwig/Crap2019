@@ -32,17 +32,19 @@
         app:srcCompat="@mipmap/d1_foreground" />
 
     <LinearLayout
+
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp">
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/PlayTextView"
@@ -55,7 +57,7 @@
                 android:id="@+id/Craps_game"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/BuyIn_textview"
@@ -75,9 +77,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/WinstextView"
@@ -90,30 +92,30 @@
                 android:id="@+id/Wins"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/Betview"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/bet"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <Spinner
                 android:id="@+id/bet_spin"
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/numbers"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/LosstextView"
@@ -126,17 +128,17 @@
                 android:id="@+id/Losses"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/RolltextView"
@@ -149,7 +151,7 @@
                 android:id="@+id/Rolls"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
 
         </LinearLayout>
@@ -157,9 +159,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/PointstextView"
@@ -172,7 +174,7 @@
                 android:id="@+id/Points"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
 
         </LinearLayout>
@@ -186,20 +188,20 @@
                 android:id="@+id/News"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="24sp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="20dp"
-                android:layout_marginHorizontal="20dp"/>
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/Rollbutton"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
                 android:onClick="onClickBtn"
                 android:text="@string/RollButton"
-                android:textSize="24sp"
-                android:layout_marginVertical="20dp"
-                android:layout_marginHorizontal="20dp"/>
+                android:textSize="24sp" />
         </LinearLayout>
 
     </LinearLayout>
