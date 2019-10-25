@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Proj_Craps</string>
+    <string name="PlayTextView"> Games: </string>
+    <string name="WinsTextView"> Wins: </string>
+    <string name="LossTextView"> Losses: </string>
+    <string name="RollTextView"> Rolls: </string>
+    <string name="PointsTextView"> Points: </string>
+    <string name="RollButton">Roll</string>
+    <string name="WelcomeTextView">Welcome!</string>
+    <string name="TextView2">How much do you want to bet?</string>
+    <string-array name="numbers">
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+
+    </string-array>
+    <string name="Bet">Bet</string>
+    <string name="available">Available</string>
+    <string name="TextView">Instructions: Select the amount you want to bet from the drop down menu.What have we learned is the first thing to do when playing a casino table game? Place a bet.
+       With Craps, the only Player who must place a bet prior to the first roll of the game is the Shooter (or person who wants to roll the dice). To become eligible to become a Shooter, place a bet.
+      The object of this Come Out roll is to establish a Point, which needs to be something other than a 2, 3, 7, 11 or 12.
+    On the Come Out roll, if a 7 or 11 is rolled prior to establishing a Point, any Player who bet on the Pass Line wins.
+        If, however, a 2, 3 or 12 is rolled, the Pass Line bet loses. The opposite is true with the Don't Pass bet, in which case, the 7 and 11 loses, and the 2, 3 and 12 wins, if rolled prior to a Point being established.</string>
+    <color name="Blue">#68AEF5</color>
+
+</resources>
