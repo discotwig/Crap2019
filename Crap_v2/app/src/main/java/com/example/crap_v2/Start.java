@@ -9,8 +9,6 @@ package com.example.crap_v2;
 
         import androidx.appcompat.app.AppCompatActivity;
 
-        import org.w3c.dom.Text;
-
 public class Start extends AppCompatActivity {
 
     EditText buy;

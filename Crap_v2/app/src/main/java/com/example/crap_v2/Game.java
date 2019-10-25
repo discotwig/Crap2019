@@ -62,7 +62,18 @@ public class Game extends AppCompatActivity {
                 bal= extras.getInt("buyin");
             }
         } else {
+            // buy in from start
             bal= (int) savedInstanceState.getSerializable("buyin");
+
+            // after restart
+            sum = savedInstanceState.getInt("SUM_KEY");
+            point = savedInstanceState.getInt("POINT_KEY");
+            wins = savedInstanceState.getInt("WINS_KEY");
+            point = savedInstanceState.getInt("LOSS_KEY");
+            bal = savedInstanceState.getInt("BAL_KEY");
+            game = savedInstanceState.getInt("GAME_KEY");
+            roles = savedInstanceState.getInt("ROLES_KEY");
+            bet = savedInstanceState.getInt("BET_KEY");
         }
 
 
@@ -293,6 +304,21 @@ public class Game extends AppCompatActivity {
         }
     }
 
+    // invoked when the activity may be temporarily destroyed, save the instance state here
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
 
+
+        savedInstanceState.putInt("SUM_KEY", sum);
+        savedInstanceState.putInt("POINT_KEY", point);
+        savedInstanceState.putInt("WINS_KEY", wins);
+        savedInstanceState.putInt("LOSS_KEY", point);
+        savedInstanceState.putInt("BAL_KEY", bal);
+        savedInstanceState.putInt("GAME_KEY", game);
+        savedInstanceState.putInt("ROLES_KEY", roles);
+        savedInstanceState.putInt("BET_KEY", bet);
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
 }
