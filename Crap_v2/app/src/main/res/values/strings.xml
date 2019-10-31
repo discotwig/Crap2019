@@ -19,11 +19,21 @@
     </string-array>
     <string name="new_game">New Game</string>
     <string name="help">Help!</string>
-    <string name="instruct">Instructions: Select the amount you want to bet from the drop down menu.What have we learned is the first thing to do when playing a casino table game? Place a bet.
-       With Craps, the only Player who must place a bet prior to the first roll of the game is the Shooter (or person who wants to roll the dice). To become eligible to become a Shooter, place a bet.
-      The object of this Come Out roll is to establish a Point, which needs to be something other than a 2, 3, 7, 11 or 12.
-    On the Come Out roll, if a 7 or 11 is rolled prior to establishing a Point, any Player who bet on the Pass Line wins.
-        If, however, a 2, 3 or 12 is rolled, the Pass Line bet loses. The opposite is true with the Don&amp; Pass bet, in which case, the 7 and 11 loses, and the 2, 3 and 12 wins, if rolled prior to a Point being established.</string>
+    <string name="instruct">
+        Instructions: \n\n
+        \n 1) Choose buy in  amount\n\n
+        2) Press &quot;LETS LOSE!&quot;\n\n
+        3) Choose bet amount (defaults to 5)\n\n
+        4) Press &quot;ROLL&quot;\n\n
+        \t 4a) On 1st role:\n
+        \t\t\t\t If dice total is 7 or 11, you win!\n
+        \t\t\t\t If dice total is 2, 3, or 12, you lose!\n
+        \t\t\t\t Else, Point is set to dice total!\n\n
+        \t 4b) On 2nd role:\n
+        \t\t\t\t If total equals the set Point, you win!\n
+        \t\t\t\t If total equals 7, then you lose!\n
+        \t\t\t\t Else, roll again!
+    </string>
     <string name="play_button">Lets Lose!</string>
     <string name="enteramount">Enter Amount</string>
     <string name="instruct_button">Show me how to lose</string>
