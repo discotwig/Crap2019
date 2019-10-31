@@ -3,5 +3,5 @@
  
   - [x] Betting logic java - start -> game
   - [x] Remove betting spinner, add edittext for buyin - start menu
-  - [ ] Clean up Instructions xml 
+  - [x] Clean up Instructions xml 
   - [x] Add background, pizzaz or whatever
